@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Korovin.AppData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,16 @@ namespace Korovin.Views.Windows
         public AuthorisationWIndow()
         {
             InitializeComponent();
+        }
+
+        private void EntryBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (AuthorisationHelper.Authorise(LoginTb.Text, PassTb.Password))
+            {
+                MenuWindow menuWindow = new MenuWindow();
+                menuWindow.Show();
+                Close();
+            }
         }
     }
 }

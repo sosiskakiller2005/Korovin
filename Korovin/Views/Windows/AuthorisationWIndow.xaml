@@ -5,12 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Korovin.Views.Windows"
         mc:Ignorable="d"
-        Title="Окно аворизации" Height="720" Width="1200">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Resources/Background.png"/>
-        </Grid.Background>
+        Title="Окно аворизации" Height="720" Width="1200" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/Resources/Background.png"/>
+    </Window.Background>
+    <StackPanel VerticalAlignment="Center">
+        <TextBlock Text="Авторизация" FontSize="40" Foreground="White" HorizontalAlignment="Center" Margin="0 0 500 0"/>
 
-        
-    </Grid>
+        <Grid Width="800">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width=".7*" />
+            </Grid.ColumnDefinitions>
+
+            <Border Background="#181A21" Grid.ColumnSpan="3" CornerRadius="40">
+                
+            </Border>
+            <StackPanel Margin="40 0 0 0">
+                <Image HorizontalAlignment="Left" Source="/Resources/Logo.png" Height="100" Width="100"/>
+                <Border Height="10"/>
+                <TextBlock Text="ВОЙТИ, ИСПОЛЬЗУЯ ИМЯ АККАУНТА" Foreground="#05A1FF"/>
+                <Border Height="5"/>
+                <TextBox Name="LoginTb" Width="400" HorizontalAlignment="Left"/>
+                <Border Height="30"/>
+                <TextBlock Text="ПАРОЛЬ" Foreground="#898989"/>
+                <PasswordBox Name="PassTb" Width="400" HorizontalAlignment="Left"/>
+                <Border Height="10"/>
+                <CheckBox Name="RememberCb" Content="Запомнить меня" />
+                <Border Height="30"/>
+                <Button Name="EntryBtn" Content="Войти" Click="EntryBtn_Click"/>
+                <Border Height="40"/>
+                <TextBlock Text="Помогите, я не могу войти в аккаунт" Foreground="#898989" HorizontalAlignment="Center" FontSize="12" TextDecorations="Underline"/>
+                <Border Height="10"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                <TextBlock Text="ИЛИ ПРИ ПОМОЩИ QR-КОДА" Foreground="#05A1FF" HorizontalAlignment="Center"/>
+                <Image Source="/Resources/qr.png" Width="270"/>
+                <TextBlock Text="Используйте камеру вашего телефона, чтобы войти с помощью QR-кода" 
+                           Foreground="#898989" HorizontalAlignment="Center" Width="250"
+                           FontSize="12" TextWrapping="Wrap" TextAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
 </Window>

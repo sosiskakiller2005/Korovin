@@ -35,13 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
@@ -71,6 +73,9 @@
     <Compile Include="AppData\MessageBoxHelper.cs" />
     <Compile Include="Views\Windows\AuthorisationWIndow.xaml.cs">
       <DependentUpon>AuthorisationWIndow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\MenuWindow.xaml.cs">
+      <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +135,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resources\Fonts\DaysOne-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -145,6 +151,8 @@
       <DependentUpon>KorovinModel.edmx</DependentUpon>
       <LastGenOutput>KorovinModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\qr.png" />
+    <Resource Include="Resources\Logo.png" />
     <Resource Include="Resources\Background.png" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Styles\CheckBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\ComboBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -165,6 +177,10 @@
     <Page Include="Styles\DatePickerStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\FontStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\ListBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -183,6 +199,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Windows\AuthorisationWIndow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\MenuWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
