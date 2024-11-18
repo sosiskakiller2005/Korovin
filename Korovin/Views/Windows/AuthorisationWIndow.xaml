@@ -32,7 +32,9 @@
                 <TextBlock Text="ПАРОЛЬ" Foreground="#898989"/>
                 <PasswordBox Name="PassTb" Width="400" HorizontalAlignment="Left"/>
                 <Border Height="10"/>
-                <CheckBox Name="RememberCb" Content="Запомнить меня" />
+                <CheckBox Name="RememberCb">
+                    <TextBlock Text="Запомнить меня" Foreground="#898989"/>
+                </CheckBox>
                 <Border Height="30"/>
                 <Button Name="EntryBtn" Content="Войти" Click="EntryBtn_Click"/>
                 <Border Height="40"/>

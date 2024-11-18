@@ -151,6 +151,7 @@
       <DependentUpon>KorovinModel.edmx</DependentUpon>
       <LastGenOutput>KorovinModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Herdon.png" />
     <Resource Include="Resources\qr.png" />
     <Resource Include="Resources\Logo.png" />
     <Resource Include="Resources\Background.png" />
@@ -179,6 +180,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\FontStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\HyperlinkStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
