@@ -1,5 +1,6 @@
 ﻿using Korovin.AppData;
 using Korovin.Model;
+using Korovin.Views.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,11 +27,13 @@ namespace Korovin.Views.Windows
         {
             InitializeComponent();
             UserSp.DataContext = _selectedUser;
+            FrameHelper.selectedFrame = MainFrm;
+            MainFrm.Navigate(new StartPage());
         }
 
         private void HiringHl_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrm.Navigate(new HiringPage()); 
         }
 
         private void ServicesHl_Click(object sender, RoutedEventArgs e)

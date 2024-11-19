@@ -71,6 +71,12 @@
     <Compile Include="AppData\AuthorisationHelper.cs" />
     <Compile Include="AppData\FrameHelper.cs" />
     <Compile Include="AppData\MessageBoxHelper.cs" />
+    <Compile Include="Views\Pages\HiringPage.xaml.cs">
+      <DependentUpon>HiringPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Windows\AuthorisationWIndow.xaml.cs">
       <DependentUpon>AuthorisationWIndow.xaml</DependentUpon>
     </Compile>
@@ -159,9 +165,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Pages\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Styles\ButtonStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -202,6 +206,14 @@
     <Page Include="Styles\TextBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Pages\HiringPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Windows\AuthorisationWIndow.xaml">
       <SubType>Designer</SubType>

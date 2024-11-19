@@ -42,12 +42,6 @@
             <TextBlock><Hyperlink Name="ScheduleCl" Click="ServicesHl_Click">Расписание</Hyperlink></TextBlock>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
-            <TextBlock Text="Korovin - лучшая компания по отделу кадров в Москве" 
-                       FontSize="30" Foreground="Black"
-                       TextWrapping="Wrap" Width="700" TextAlignment="Center"/>
-            <Border Width="50"/>
-            <Image Source="/Resources/Herdon.png" Height="250"/>
-        </StackPanel>
+        <Frame Name="MainFrm" Grid.Row="2" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
