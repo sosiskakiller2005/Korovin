@@ -12,7 +12,7 @@
         <TextBlock Text="НАЙМ ОТДЕЛ КАДРОВ ШКОЛЫ “KOROVIN”" FontSize="30"
                    TextWrapping="Wrap" TextAlignment="Center" Width="600"/>
         <Border Height="10"/>
-        <ListBox Name="EmployeesLb" Margin="10" ScrollViewer.CanContentScroll="True" Height="450" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+        <ListBox Name="EmployeesLb" Margin="10" ScrollViewer.CanContentScroll="True" Height="700" ScrollViewer.VerticalScrollBarVisibility="Hidden" MouseDoubleClick="EmployeesLb_MouseDoubleClick">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Height="200" >

@@ -1,4 +1,5 @@
 ﻿using Korovin.Model;
+using Korovin.Views.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,12 @@ namespace Korovin.Views.Pages
         private void ScheduleBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void EmployeesLb_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            EmployeeWindow employeeWindow = new EmployeeWindow(EmployeesLb.SelectedItem as Employee);
+            employeeWindow.ShowDialog();
         }
     }
 }
